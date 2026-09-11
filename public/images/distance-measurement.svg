@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="soundGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#07090e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1f35;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#soundGrad)"/>
+
+  <!-- Waveform -->
+  <path d="M 100,300 Q 150,250 200,300 T 300,300 Q 350,350 400,300 T 500,300 Q 550,250 600,300 T 700,300"
+        fill="none" stroke="#10b981" stroke-width="3" opacity="0.8"/>
+
+  <!-- Sound waves circles -->
+  <circle cx="400" cy="300" r="50" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="300" r="100" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.4"/>
+  <circle cx="400" cy="300" r="150" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.2"/>
+
+  <!-- Microphone icon -->
+  <circle cx="400" cy="300" r="30" fill="#8b5cf6" opacity="0.3"/>
+  <rect x="385" y="310" width="30" height="40" rx="15" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <circle cx="400" cy="325" r="10" fill="#a78bfa"/>
+
+  <!-- Distance indicator -->
+  <text x="400" y="200" font-size="48" font-weight="bold" fill="#38bdf8" text-anchor="middle">1.5m</text>
+
+  <!-- Title -->
+  <text x="400" y="540" font-size="32" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Distance Measurement</text>
+  <text x="400" y="570" font-size="16" fill="#94a3b8" text-anchor="middle">Acoustic Sound System</text>
+</svg>

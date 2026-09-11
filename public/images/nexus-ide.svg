@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#ideBg)" />
+
+  <!-- IDE Window Frame -->
+  <rect x="80" y="60" width="640" height="340" rx="12" fill="#0b0f19" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+
+  <!-- Window Controls -->
+  <circle cx="105" cy="85" r="5" fill="#f43f5e" />
+  <circle cx="120" cy="85" r="5" fill="#f59e0b" />
+  <circle cx="135" cy="85" r="5" fill="#10b981" />
+  <text x="160" y="89" font-family="monospace" font-size="11" fill="#64748b">server.ts — Nexus Cloud Collaborative Editor</text>
+
+  <!-- Sidebar -->
+  <line x1="220" y1="105" x2="220" y2="400" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="100" y="130" font-family="monospace" font-size="11" fill="#94a3b8">📁 src/</text>
+  <text x="115" y="155" font-family="monospace" font-size="11" fill="#06b6d4">📄 server.ts</text>
+  <text x="115" y="180" font-family="monospace" font-size="11" fill="#94a3b8">📄 crdt.ts</text>
+  <text x="115" y="205" font-family="monospace" font-size="11" fill="#94a3b8">📄 room.ts</text>
+  <text x="100" y="235" font-family="monospace" font-size="11" fill="#94a3b8">📁 sandbox/</text>
+
+  <!-- Active Collaborative Users -->
+  <rect x="95" y="320" width="110" height="65" rx="8" fill="rgba(255,255,255,0.04)" border="1" />
+  <text x="105" y="340" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff">ONLINE USERS (3)</text>
+  <circle cx="112" cy="360" r="4" fill="#06b6d4" />
+  <text x="122" y="364" font-family="monospace" font-size="10" fill="#38bdf8">Prakash (Cursor)</text>
+  <circle cx="112" cy="375" r="4" fill="#ec4899" />
+  <text x="122" y="379" font-family="monospace" font-size="10" fill="#f472b6">Alex (Collaborator)</text>
+
+  <!-- Code Editor Body -->
+  <g font-family="monospace" font-size="12" xml:space="preserve">
+    <text x="245" y="140" fill="#ec4899">import</text>
+    <text x="295" y="140" fill="#ffffff">{ WebSocketServer } </text>
+    <text x="450" y="140" fill="#ec4899">from</text>
+    <text x="485" y="140" fill="#a5b4fc">'ws'</text>
+    <text x="515" y="140" fill="#ffffff">;</text>
+
+    <text x="245" y="170" fill="#818cf8">const</text>
+    <text x="290" y="170" fill="#38bdf8">wss</text>
+    <text x="315" y="170" fill="#ffffff">= </text>
+    <text x="330" y="170" fill="#818cf8">new</text>
+    <text x="360" y="170" fill="#38bdf8">WebSocketServer</text>
+    <text x="475" y="170" fill="#ffffff">({ port: 8080 });</text>
+
+    <text x="245" y="200" fill="#38bdf8">wss</text>
+    <text x="270" y="200" fill="#ffffff">.on(</text>
+    <text x="300" y="200" fill="#a5b4fc">'connection'</text>
+    <text x="400" y="200" fill="#ffffff">, (socket, req) =&gt; {</text>
+
+    <text x="265" y="230" fill="#64748b">// Real-time CRDT Conflict-Free Synchronization</text>
+    <text x="265" y="260" fill="#38bdf8">syncDocument</text>
+    <text x="355" y="260" fill="#ffffff">(socket, roomDoc);</text>
+
+    <text x="245" y="290" fill="#ffffff">});</text>
+  </g>
+
+  <!-- Live Cursor 1 -->
+  <rect x="420" y="247" width="2" height="16" fill="#06b6d4" />
+  <rect x="420" y="230" width="55" height="15" rx="3" fill="#06b6d4" />
+  <text x="425" y="242" font-family="sans-serif" font-size="9" font-weight="bold" fill="#000000">Prakash</text>
+
+  <!-- Live Cursor 2 -->
+  <rect x="365" y="277" width="2" height="16" fill="#ec4899" />
+  <rect x="365" y="260" width="40" height="15" rx="3" fill="#ec4899" />
+  <text x="370" y="272" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff">Alex</text>
+
+  <!-- Title Bottom -->
+  <text x="100" y="440" font-family="sans-serif" font-size="24" font-weight="bold" fill="#ffffff">Nexus Collaborative Cloud IDE</text>
+  <text x="100" y="465" font-family="sans-serif" font-size="14" fill="#94a3b8">Multiplayer Real-time Code Editor with CRDT Conflict Resolution & Docker Sandboxing</text>
+</svg>
